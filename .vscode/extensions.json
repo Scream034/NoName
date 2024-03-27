@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "gruntfuggly.todo-tree",
+        "geequlim.godot-tools",
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "ms-dotnettools.csharp",
+        "neikeq.godot-csharp-vscode",
+        "k--kato.docomment",
+        "usernamehw.errorlens",
+        "ms-vscode.mono-debug"
+    ]
+}

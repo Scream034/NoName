@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://gr84on81w7t4"]
+
+[ext_resource type="Texture2D" uid="uid://561culrusnal" path="res://assets/atlases/16x16/Coin.png" id="1"]
+[ext_resource type="Script" path="res://scripts/game/objects/CollectibleItem.gd" id="1_fjtd3"]
+[ext_resource type="Script" path="res://scripts/game/objects/PUCA.gd" id="3_kp0n7"]
+
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("1")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="7"]
+atlas = ExtResource("1")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource("1")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="9"]
+atlas = ExtResource("1")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="10"]
+atlas = ExtResource("1")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="11"]
+atlas = ExtResource("1")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="12"]
+atlas = ExtResource("1")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="13"]
+atlas = ExtResource("1")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="14"]
+atlas = ExtResource("1")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("1")
+}, {
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
+"duration": 1.0,
+"texture": SubResource("3")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}, {
+"duration": 1.0,
+"texture": SubResource("7")
+}, {
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("9")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}, {
+"duration": 1.0,
+"texture": SubResource("11")
+}, {
+"duration": 1.0,
+"texture": SubResource("12")
+}, {
+"duration": 1.0,
+"texture": SubResource("13")
+}, {
+"duration": 1.0,
+"texture": SubResource("14")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_xmbwg"]
+script/source = "extends AnimatedSprite2D
+
+func _ready() -> void:
+	frame = randi_range(0, sprite_frames.get_frame_count(\"default\"))
+	play(\"default\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fluhf"]
+size = Vector2(16, 24)
+
+[node name="Coin" type="Node2D"]
+script = ExtResource("1_fjtd3")
+type_name = "Coin"
+max_count = 10
+count = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("15")
+script = SubResource("GDScript_xmbwg")
+
+[node name="PickUpArea" type="Area2D" parent="."]
+collision_layer = 24
+collision_mask = 24
+collision_priority = 2.0
+monitorable = false
+priority = 2
+script = ExtResource("3_kp0n7")
+
+[node name="Shape" type="CollisionShape2D" parent="PickUpArea"]
+shape = SubResource("RectangleShape2D_fluhf")

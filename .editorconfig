@@ -1,0 +1,15 @@
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = crlf
+
+[*.cs]
+indent_style = tab
+indent_size = 2
+insert_final_newline = true
+
+# CS8632: Аннотацию для ссылочных типов, допускающих значения NULL, следует использовать в коде только в контексте аннотаций "#nullable".
+dotnet_diagnostic.CS8632.severity = none
+

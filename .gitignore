@@ -1,0 +1,6 @@
+# Игнор настроек области в Godot Engine 4+
+.godot/
+.import/
+.versions/
+# Без временных файлов
+*.tmp
