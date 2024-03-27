@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c536oif23cvkc"]
+
+[ext_resource type="Script" path="res://scripts/game/objects/MeleeWeapon.gd" id="1_o00v2"]
+[ext_resource type="SpriteFrames" uid="uid://3b2w20uh0ig2" path="res://resources/atlases/animated/Sword.tres" id="2_s0ylv"]
+[ext_resource type="Script" path="res://scripts/core/game/item/BasePUIA.gd" id="3_r7kwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mrfr"]
+
+[node name="Sword" type="Node2D"]
+script = ExtResource("1_o00v2")
+damage = 15
+attack_cooldown = 0.5
+id = 0
+max_count = 1
+count = 1
+display_name = "Sword"
+description = "A light sword."
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_s0ylv")
+
+[node name="PickUpArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 16
+collision_priority = 3.0
+monitorable = false
+priority = 3
+script = ExtResource("3_r7kwm")
+
+[node name="Shape" type="CollisionShape2D" parent="PickUpArea"]
+shape = SubResource("RectangleShape2D_5mrfr")

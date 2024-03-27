@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"command": "echo",
+			"type": "shell",
+			"args": [
+				"--- Конец сборки ---"
+			],
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"startBuild",
+				"executeBuild"
+			]
+		},
+		{
+			"label": "executeBuild",
+			"command": "dotnet",
+			"type": "shell",
+			"args": [
+				"build",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "startBuild",
+			"command": "echo",
+			"type": "shell",
+			"args": [
+				"--- Начало сборки ---"
+			]
+		}
+	]
+}

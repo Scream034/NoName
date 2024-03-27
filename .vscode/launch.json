@@ -1,0 +1,47 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Godot4-mono",
+			"type": "coreclr",
+			"request": "launch",
+			
+			"args": [
+				"${env:GODOT4_MONO_PATH}",
+				"--path",
+				"${workspaceFolder}"
+			],
+			"cwd": "${workspaceFolder}",
+			"stopAtEntry": false,
+			"console": "integratedTerminal",
+
+			// Указать путь до Godot4
+			"program": "c:/Users/paralax/Desktop/Programs/Godot_v4.3-dev5_mono_win64/Godot_v4.3-dev5_mono_win64.exe"
+		},
+
+		{
+			// TODO: В будущем нужно убрать эту двойную запись, возможно через переменные среды
+			// Указать путь до Godot4
+			"program": "c:/Users/paralax/Desktop/Programs/Godot_v4.3-dev5_mono_win64/Godot_v4.3-dev5_mono_win64.exe",
+
+			"name": "Godot4-mono and build",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build",
+			
+			"args": [
+				"${env:GODOT4_MONO_PATH}",
+				"--path",
+				"${workspaceFolder}"
+			],
+			"cwd": "${workspaceFolder}",
+			"stopAtEntry": false,
+			"console": "integratedTerminal"
+		},
+		{
+			"name": ".NET Core Attach",
+			"type": "coreclr",
+			"request": "attach"
+		}
+	]
+}

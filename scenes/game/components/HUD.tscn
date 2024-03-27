@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhttw4pcflnao"]
+
+[ext_resource type="PackedScene" uid="uid://cnnerb0e0j86p" path="res://scenes/game/components/HUDHearts.tscn" id="1_g6yfr"]
+[ext_resource type="PackedScene" uid="uid://63wtn43y0ngg" path="res://scenes/game/components/HUDStats.tscn" id="2_nu7j2"]
+
+[sub_resource type="GDScript" id="GDScript_1p7ew"]
+script/source = "extends RichTextLabel
+
+@onready var default_text := text
+var debug := {}: set = update_debug
+
+func set_debug(_name: String, value, priority: int = 0) -> void:
+	debug[_name] = [priority, value, priority]
+	update_debug(debug)
+
+func update_debug(new_debug: Dictionary) -> void:
+	# Сортируем элементы по приоритету в порядке убывания
+	var sorted_keys = new_debug.keys()
+	sorted_keys.sort_custom(func(a, b): return new_debug[a][0] > new_debug[b][0])
+	
+	var new_text := default_text
+	for key in sorted_keys:
+		var item = new_debug[key]
+		var value := str(item[1])
+		new_text += \"[color=aqua]%s[/color]: [i]%s[/i]\\n\" % [key, value]
+	text = new_text
+	
+	debug = new_debug
+"
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hearts" parent="Control" instance=ExtResource("1_g6yfr")]
+layout_mode = 0
+offset_right = 501.0
+offset_bottom = 72.0
+
+[node name="Stats" parent="Control" instance=ExtResource("2_nu7j2")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 0.15625
+anchor_bottom = 0.304167
+metadata/_edit_use_anchors_ = true
+
+[node name="Debug" type="RichTextLabel" parent="Control"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "[center]Debug[/center]
+"
+text_direction = 1
+script = SubResource("GDScript_1p7ew")

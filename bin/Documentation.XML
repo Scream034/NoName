@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Amethyst</name>
+    </assembly>
+    <members>
+        <member name="T:Map.MethodName">
+            <summary>
+            Cached StringNames for the methods contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Map.MethodName._Ready">
+            <summary>
+            Cached name for the '_Ready' method.
+            </summary>
+        </member>
+        <member name="F:Map.MethodName._PhysicsProcess">
+            <summary>
+            Cached name for the '_PhysicsProcess' method.
+            </summary>
+        </member>
+        <member name="M:Map.GetGodotMethodList">
+            <summary>
+            Get the method information for all the methods declared in this class.
+            This method is used by Godot to register the available methods in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Map.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.NativeVariantPtrArgs,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Map.HasGodotClassMethod(Godot.NativeInterop.godot_string_name@)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Map.PropertyName">
+            <summary>
+            Cached StringNames for the properties and fields contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Map.PropertyName.Quarks">
+            <summary>
+            Cached name for the 'Quarks' property.
+            </summary>
+        </member>
+        <member name="F:Map.PropertyName._quarks">
+            <summary>
+            Cached name for the '_quarks' field.
+            </summary>
+        </member>
+        <member name="F:Map.PropertyName.time">
+            <summary>
+            Cached name for the 'time' field.
+            </summary>
+        </member>
+        <member name="M:Map.SetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Map.GetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Map.GetGodotPropertyList">
+            <summary>
+            Get the property information for all the properties declared in this class.
+            This method is used by Godot to register the available properties in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Map.SaveGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Map.RestoreGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Map.SignalName">
+            <summary>
+            Cached StringNames for the signals contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="T:Core.Game.Controllers.MovementController">
+            <summary>
+            Класс MovementController управляет движением объекта. <br/>
+            <b>Для работы объекта необходимо обновлять его через метод <c>UpdateMovement</c>.</b>
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.Direction">
+            <summary>
+            Структура направления.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.IsMoving">
+            <summary>
+            Двигается ли объект
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса MovementController.
+            </summary>
+            <returns>Ненастроенный экземпляр.</returns>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.#ctor(MovementDirection,Core.Interfaces.IDefaultValue{System.Single},Core.Interfaces.IDefaultValue{System.Single},Core.Types.InterpolationFloatValue)">
+            <summary>
+            Инициализирует новый экземпляр класса MovementController.
+            </summary>
+            <param name="direction">Направление движения.</param>
+            <param name="acceleration">Положительное ускорение.</param>
+            <param name="decceleration">Отрицательное ускорение.</param>
+            <param name="interpolationSpeed">Интерполяция скорости.</param>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.UpdateMovement(Godot.Vector2)">
+            <summary>
+            Обновляет движение объекта.
+            </summary>
+            <param name="velocity">Текущая скорость.</param>
+            <returns>Новое Velocity</returns>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.UpdateMovementSpeed">
+            <summary>
+            Обновляет скорость движения объекта.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.UpdateMovementFlags">
+            <summary>
+            Обновляет флаги движения объекта.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.GetTurnFactorFromDirection">
+            <summary>
+            Получает коэффициент поворота от направления.
+            </summary>
+            <returns>Коэффициент поворота.</returns>
+        </member>
+        <member name="T:Core.Game.Controllers.MovementController.MethodName">
+            <summary>
+            Cached StringNames for the methods contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.MethodName.UpdateMovement">
+            <summary>
+            Cached name for the 'UpdateMovement' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.MethodName.UpdateMovementSpeed">
+            <summary>
+            Cached name for the 'UpdateMovementSpeed' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.MethodName.UpdateMovementFlags">
+            <summary>
+            Cached name for the 'UpdateMovementFlags' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.MethodName.GetTurnFactorFromDirection">
+            <summary>
+            Cached name for the 'GetTurnFactorFromDirection' method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.GetGodotMethodList">
+            <summary>
+            Get the method information for all the methods declared in this class.
+            This method is used by Godot to register the available methods in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.NativeVariantPtrArgs,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.HasGodotClassMethod(Godot.NativeInterop.godot_string_name@)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Core.Game.Controllers.MovementController.PropertyName">
+            <summary>
+            Cached StringNames for the properties and fields contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.PropertyName.MaxSpeed">
+            <summary>
+            Cached name for the 'MaxSpeed' property.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.PropertyName.WalkingSpeed">
+            <summary>
+            Cached name for the 'WalkingSpeed' property.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.PropertyName.RunningSpeed">
+            <summary>
+            Cached name for the 'RunningSpeed' property.
+            </summary>
+        </member>
+        <member name="F:Core.Game.Controllers.MovementController.PropertyName.IsMoving">
+            <summary>
+            Cached name for the 'IsMoving' field.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.SetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.GetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.GetGodotPropertyList">
+            <summary>
+            Get the property information for all the properties declared in this class.
+            This method is used by Godot to register the available properties in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.GetGodotPropertyDefaultValues">
+            <summary>
+            Get the default values for all properties declared in this class.
+            This method is used by Godot to determine the value that will be
+            used by the inspector when resetting properties.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.SaveGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.Controllers.MovementController.RestoreGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Core.Game.Controllers.MovementController.SignalName">
+            <summary>
+            Cached StringNames for the signals contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="T:Core.Game.Interfaces.IMovementAcceleration">
+            <summary>
+            Интерфейс, определяющий поля ускорения движения.
+            </summary>
+        </member>
+        <member name="P:Core.Game.Interfaces.IMovementAcceleration.Acceleration">
+            <summary>
+            Значение положительного ускорения по умолчанию.
+            </summary>
+        </member>
+        <member name="P:Core.Game.Interfaces.IMovementAcceleration.Decceleration">
+            <summary>
+            Значение отрительного ускорения по умолчанию.
+            </summary>
+        </member>
+        <member name="T:Core.Game.Interfaces.IMovementSpeed">
+            <summary>
+            Интерфейс, определяющий поля скорости движения.
+            </summary>
+        </member>
+        <member name="P:Core.Game.Interfaces.IMovementSpeed.MaxSpeed">
+            <summary>
+            Максимальная скорость.
+            </summary>
+        </member>
+        <member name="P:Core.Game.Interfaces.IMovementSpeed.WalkingSpeed">
+            <summary>
+            Скорость ходьбы.
+            </summary>
+        </member>
+        <member name="P:Core.Game.Interfaces.IMovementSpeed.RunningSpeed">
+            <summary>
+            Скорость бега.
+            </summary>
+        </member>
+        <member name="P:Core.Game.Interfaces.IMovementSpeed.InterpolationSpeed">
+            <summary>
+            Значение интерполяции.
+            </summary>
+        </member>
+        <member name="T:Core.Game.LivingEntity.MethodName">
+            <summary>
+            Cached StringNames for the methods contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.MethodName._Get">
+            <summary>
+            Cached name for the '_Get' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.MethodName._Set">
+            <summary>
+            Cached name for the '_Set' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.MethodName._GetPropertyList">
+            <summary>
+            Cached name for the '_GetPropertyList' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.MethodName._Ready">
+            <summary>
+            Cached name for the '_Ready' method.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.MethodName._PhysicsProcess">
+            <summary>
+            Cached name for the '_PhysicsProcess' method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.LivingEntity.GetGodotMethodList">
+            <summary>
+            Get the method information for all the methods declared in this class.
+            This method is used by Godot to register the available methods in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.LivingEntity.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.NativeVariantPtrArgs,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.LivingEntity.HasGodotClassMethod(Godot.NativeInterop.godot_string_name@)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Core.Game.LivingEntity.PropertyName">
+            <summary>
+            Cached StringNames for the properties and fields contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.PropertyName.Kak">
+            <summary>
+            Cached name for the 'Kak' property.
+            </summary>
+        </member>
+        <member name="F:Core.Game.LivingEntity.PropertyName._movement">
+            <summary>
+            Cached name for the '_movement' field.
+            </summary>
+        </member>
+        <member name="M:Core.Game.LivingEntity.SetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.LivingEntity.GetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.LivingEntity.GetGodotPropertyList">
+            <summary>
+            Get the property information for all the properties declared in this class.
+            This method is used by Godot to register the available properties in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Core.Game.LivingEntity.SaveGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Core.Game.LivingEntity.RestoreGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Core.Game.LivingEntity.SignalName">
+            <summary>
+            Cached StringNames for the signals contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="P:Core.Interfaces.IDefaultValue`1.Default">
+            <summary>
+            Значение по умолчанию.
+            </summary>
+        </member>
+        <member name="P:Core.Interfaces.IDefaultValue`1.Current">
+            <summary>
+            Текущее значение.
+            </summary>
+        </member>
+        <member name="T:Core.Interfaces.IInterpolationDelta">
+            <summary>
+            Структура для хранения дельты интерполяции.
+            </summary>
+        </member>
+        <member name="P:Core.Interfaces.IInterpolationDelta.PositiveDelta">
+            <summary>
+            Положительное значение дельты.
+            </summary>
+        </member>
+        <member name="P:Core.Interfaces.IInterpolationDelta.NegativeDelta">
+            <summary>
+            Отрицательное значение дельты.
+            </summary>
+        </member>
+        <member name="T:Core.Types.DefaultValueClass`1">
+            <summary>
+            Нужен для хранения текущего и дефолтного значения. <br/>
+            <b>Рекомендуется для больших данных.</b> или используйте <c>DefaultValueStruct</c> <br/>
+            Может использоваться, как хранение текущего значения и конечного.
+            </summary>
+            <typeparam name="T">notnull</typeparam>
+        </member>
+        <member name="P:Core.Types.DefaultValueClass`1.Default">
+            <summary>
+            Значение по умолчанию.
+            </summary>
+        </member>
+        <member name="P:Core.Types.DefaultValueClass`1.Current">
+            <summary>
+            Текущее значение.
+            </summary>
+        </member>
+        <member name="M:Core.Types.DefaultValueClass`1.#ctor(`0@)">
+            <summary>
+            Конструктор класса.
+            </summary>
+            <param name="defaultValue">Значение по умолчанию.</param>
+        </member>
+        <member name="T:Core.Types.DefaultValueStruct`1">
+            <summary>
+            Нужен для хранения текущего и дефолтного значения. <br/>
+            <b>Рекомендуется для небольших данных.</b> или используйте <c>DefaultValueClass</c>
+            </summary>
+            <typeparam name="T">notnull</typeparam>
+        </member>
+        <member name="T:Core.Types.InterpolationFloatValue">
+            <summary>Класс для хранения только <c>float</c> интерполированного значения.</summary>
+        </member>
+        <member name="F:Core.Types.InterpolationFloatValue.RangeValues">
+            <summary>Диапазон значений для интерполяции.</summary>
+        </member>
+        <member name="P:Core.Types.InterpolationFloatValue.TargetValue">
+            <summary>Конечное значение интерполяции в текущей итерации.</summary>
+        </member>
+        <member name="P:Core.Types.InterpolationFloatValue.CanUpdate">
+            <summary>Может ли обновляться интерполяция.</summary>
+        </member>
+        <member name="P:Core.Types.InterpolationFloatValue.CurrentValue">
+            <summary>Текущее значение, ограниченное диапазоном значений.</summary>
+        </member>
+        <member name="M:Core.Types.InterpolationFloatValue.#ctor">
+            <summary>Конструктор для создания <b>пустого</b> экземпляра InterpolationFloatValue.</summary>
+        </member>
+        <member name="M:Core.Types.InterpolationFloatValue.#ctor(Core.Types.ValueRange{System.Single}@,Core.Interfaces.IDefaultValue{System.Single}@,Core.Interfaces.IDefaultValue{System.Single}@,System.Single@,System.Boolean@)">
+            <summary>Конструктор для создания экземпляра InterpolationFloatValue.</summary>
+        </member>
+        <member name="M:Core.Types.InterpolationFloatValue.SetCurrentValue(System.Single@)">
+            <summary>Установить текущее значение интерполяции.</summary>
+            <param name="value">Новое текущее значение интерполяции</param>
+        </member>
+        <member name="T:Core.Types.ValueRange`1">
+            <summary>
+            Класс хранения значения в заданном диапазоне.
+            </summary>
+            <typeparam name="T">Тип значения.</typeparam>
+        </member>
+        <member name="P:Core.Types.ValueRange`1.MinValue">
+            <summary>
+            Минимальное значение.
+            </summary>
+        </member>
+        <member name="P:Core.Types.ValueRange`1.MaxValue">
+            <summary>
+            Максимальное значение.
+            </summary>
+        </member>
+        <member name="P:Core.Types.ValueRange`1.CurrentValue">
+            <summary>
+            Текущее значение.
+            </summary>
+        </member>
+        <member name="T:CustomGGSet">
+            <summary>
+            CustomGodotGetterSetter
+            </summary>
+        </member>
+        <member name="T:MovementDirection">
+            <summary>
+            Структура, определяющая направление движения.
+            </summary>
+        </member>
+        <member name="F:MovementDirection.PreviousValue">
+            <summary>
+            Предыдущее направление.
+            </summary>
+        </member>
+        <member name="P:MovementDirection.CurrentValue">
+            <summary>
+            Текущее направление.
+            </summary>
+        </member>
+        <member name="P:MovementDirection.Active">
+            <summary>
+            Активное направление.
+            </summary>
+        </member>
+        <member name="M:MovementDirection.#ctor(Godot.Vector2@)">
+            <summary>
+            Конструктор структуры направления движения сущности.
+            </summary>
+        </member>
+    </members>
+</doc>
