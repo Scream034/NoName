@@ -1,4 +1,3 @@
-using System;
 using Core.Interfaces;
 
 namespace Core.Types
@@ -9,29 +8,38 @@ namespace Core.Types
   /// <b>Рекомендуется для небольших данных.</b> или используйте <c>DefaultValueClass</c>
   /// </summary>
   /// <typeparam name="T">notnull</typeparam>
-  public struct DefaultValueStruct<T> : IDefaultValue<T> where T : struct
-  {
-	private T defaultValue;
-	private T currentValue;
-
-	public T Default
+	public struct DefaultValueStruct<T> : IDefaultValue<T> where T : struct
 	{
-	  get => defaultValue;
-	  set => defaultValue = value;
-	}
+		private T _default;
+		private T _current;
 
-	public T Current
-	{
-	  get => currentValue;
-	  set => currentValue = value;
-	}
+		/// <summary>
+		/// Значение по умолчанию.
+		/// </summary>ы
+		public T Default
+		{
+			get => _default;
+			set => _default = value;
+		}
+
+		/// <summary>
+		/// Текущее значение.
+		/// </summary>
+		public T Current
+		{
+			get => _current;
+			set => _current = value;
+		}
 
 
-	public DefaultValueStruct(T defaultValue)
-	{
-	  this.defaultValue = defaultValue;
-	  currentValue = defaultValue;
+		/// <summary>
+		/// Конструктор структуры.
+		/// </summary>
+		/// <param name="defaultValue">Значение по умолчанию.</param>
+		public DefaultValueStruct(in T defaultValue)
+		{
+			_default = _current = defaultValue;
+		}
 	}
-  }
 
 }

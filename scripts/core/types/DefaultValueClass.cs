@@ -11,16 +11,16 @@ namespace Core.Types
 	/// <typeparam name="T">notnull</typeparam>
 	public class DefaultValueClass<T> : IDefaultValue<T> where T : struct
 	{
-		private T defaultValue;
-		private T currentValue;
+		private T _default;
+		private T _current;
 
 		/// <summary>
 		/// Значение по умолчанию.
-		/// </summary>
+		/// </summary>ы
 		public T Default
 		{
-			get => defaultValue;
-			set => defaultValue = value;
+			get => _default;
+			set => _default = value;
 		}
 
 		/// <summary>
@@ -28,8 +28,8 @@ namespace Core.Types
 		/// </summary>
 		public T Current
 		{
-			get => currentValue;
-			set => currentValue = value;
+			get => _current;
+			set => _current = value;
 		}
 
 
@@ -39,8 +39,7 @@ namespace Core.Types
 		/// <param name="defaultValue">Значение по умолчанию.</param>
 		public DefaultValueClass(in T defaultValue)
 		{
-			this.defaultValue = defaultValue;
-			currentValue = defaultValue;
+			_default = _current = defaultValue;
 		}
 	}
 

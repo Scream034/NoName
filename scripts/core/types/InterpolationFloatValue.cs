@@ -23,6 +23,8 @@ namespace Core.Types
 		/// <summary>Текущее значение, ограниченное диапазоном значений.</summary>
 		public float CurrentValue { get; private set; }
 
+		public string KAKA = "Net";
+
 
 		/// <summary>Конструктор для создания <b>пустого</b> экземпляра InterpolationFloatValue.</summary>
 		public InterpolationFloatValue()

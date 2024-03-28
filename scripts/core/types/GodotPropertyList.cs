@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Godot;
 using Godot.Collections;
 
@@ -9,6 +10,8 @@ namespace Core.Types
 		private List<GodotProperty> properties = new List<GodotProperty>();
 
 		public void AddProperty(GodotProperty property) => properties.Add(property);
+
+		public void AddProperties(GodotProperty[] newProperties) => properties.Concat(newProperties.ToArray());
 
 		public void RemoveProperty(GodotProperty property) => properties.Remove(property);
 
