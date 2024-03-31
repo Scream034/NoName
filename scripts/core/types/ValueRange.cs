@@ -10,6 +10,8 @@ namespace Core.Types
 	/// <typeparam name="T">Тип значения.</typeparam>
 	public class ValueRange<T> where T : IComparable
 	{
+		private static readonly IComparer<T> _comparer = Comparer<T>.Default;
+
 		private T _minValue = default;
 		/// <summary>
 		/// Минимальное значение.
@@ -19,7 +21,7 @@ namespace Core.Types
 			get { return _minValue; }
 			set
 			{
-				if (Comparer<T>.Default.Compare(value, _maxValue) < 0)
+				if (_comparer.Compare(value, _maxValue) < 0)
 					_minValue = value;
 				else
 					throw new ArgumentException("Minimum value must be less than the maximum value");
@@ -35,7 +37,7 @@ namespace Core.Types
 			get { return _maxValue; }
 			set
 			{
-				if (Comparer<T>.Default.Compare(value, _minValue) > 0)
+				if (_comparer.Compare(value, _minValue) > 0)
 					_maxValue = value;
 				else
 					throw new ArgumentException("Maximum value must be greater than the minimum value");
@@ -50,7 +52,7 @@ namespace Core.Types
 			get { return _currentValue; }
 			set
 			{
-				if (Comparer<T>.Default.Compare(value, _minValue) >= 0 && Comparer<T>.Default.Compare(value, _maxValue) <= 0)
+				if (_comparer.Compare(value, _minValue) >= 0 && _comparer.Compare(value, _maxValue) <= 0)
 					_currentValue = value;
 				else
 					throw new ArgumentException("Value must be within the range");

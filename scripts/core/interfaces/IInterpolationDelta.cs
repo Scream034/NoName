@@ -1,3 +1,5 @@
+using Core.Types;
+
 namespace Core
 {
   namespace Interfaces
@@ -11,12 +13,12 @@ namespace Core
 	  /// <summary>
 	  /// Положительное значение дельты.
 	  /// </summary>
-	  public IDefaultValue<float> PositiveDelta { get; set; }
+	  public DefaultValue<float> PositiveDelta { get; set; }
 
 	  /// <summary>
 	  /// Отрицательное значение дельты.
 	  /// </summary>
-	  public IDefaultValue<float> NegativeDelta { get; set; }
+	  public DefaultValue<float> NegativeDelta { get; set; }
 	}
 
   }

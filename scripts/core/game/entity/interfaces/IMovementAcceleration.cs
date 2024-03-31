@@ -1,4 +1,4 @@
-using Core.Interfaces;
+using Core.Types;
 
 namespace Core.Game.Interfaces
 {
@@ -11,12 +11,12 @@ namespace Core.Game.Interfaces
 	/// <summary>
 	/// Значение положительного ускорения по умолчанию.
 	/// </summary>
-	public IDefaultValue<float> Acceleration { get; set; }
+	public DefaultValue<float> Acceleration { get; set; }
 
 	/// <summary>
 	/// Значение отрительного ускорения по умолчанию.
 	/// </summary>
-	public IDefaultValue<float> Decceleration { get; set; }
+	public DefaultValue<float> Decceleration { get; set; }
   }
 
 }

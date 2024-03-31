@@ -1,9 +1,7 @@
 using System;
 using Godot;
-using Godot.Collections;
 
 using Core.Types;
-using Core.Interfaces;
 using Core.Game.Interfaces;
 
 namespace Core.Game.Controllers
@@ -25,8 +23,8 @@ namespace Core.Game.Controllers
 		/// </summary>
 		public bool IsMoving = false;
 
-		public IDefaultValue<float> Acceleration { get; set; }
-		public IDefaultValue<float> Decceleration { get; set; }
+		public DefaultValue<float> Acceleration { get; set; }
+		public DefaultValue<float> Decceleration { get; set; }
 		[Export] public float MaxSpeed { get; set; } = 0f;
 		public float WalkingSpeed { get; set; }
 		public float RunningSpeed { get; set; }
@@ -41,8 +39,8 @@ namespace Core.Game.Controllers
 		public MovementController()
 		{
 			Direction = new();
-			Acceleration = new DefaultValueClass<float>(0f);
-			Decceleration = new DefaultValueClass<float>(0f);
+			Acceleration = new ();
+			Decceleration = new ();
 			InterpolationSpeed = new();
 		}
 
@@ -53,7 +51,7 @@ namespace Core.Game.Controllers
 		/// <param name="acceleration">Положительное ускорение.</param>
 		/// <param name="decceleration">Отрицательное ускорение.</param>
 		/// <param name="interpolationSpeed">Интерполяция скорости.</param>
-		public MovementController(MovementDirection direction, IDefaultValue<float> acceleration, IDefaultValue<float> decceleration, InterpolationFloatValue interpolationSpeed)
+		public MovementController(in MovementDirection direction, in DefaultValue<float> acceleration, in DefaultValue<float> decceleration, in InterpolationFloatValue interpolationSpeed)
 		{
 			Direction = direction;
 			Acceleration = acceleration;
